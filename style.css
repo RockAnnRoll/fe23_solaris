@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #190b22, #0c164d);
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+#solaris-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: medium;
+}
+
+#input-header {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+#input-button {
+  height: 3rem;
+  width: 5rem;
+  background-color: rgba(255, 208, 41, 1);
+  border: 1px solid color=rgb(212, 210, 210);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: larger;
+}
+#search-field {
+  height: 3rem;
+  width: 25rem;
+  margin-left: 150px;
+  border-radius: 4px;
+  border: 1px solid color=rgb(212, 210, 210);
+  font-size: larger;
+  font-family: inherit;
+  padding-left: 1rem;
+}
+#titles-header {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-top: 30px;
+  margin-right: 30px;
+}
+
+#head-title {
+  color: rgba(255, 255, 255, 1);
+  font-family: "Secular One", sans-serif;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 60px;
+  letter-spacing: 0.09em;
+  text-align: right;
+}
+
+#sub-title {
+  color: rgba(255, 208, 41, 1);
+  font-family: Lora;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.6em;
+  text-align: right;
+}
+
+#animation-sun {
+  border-radius: 0 100% 100% 0/0 50% 50% 0;
+  background-color: rgba(255, 208, 41, 1);
+
+  /*display: inline-block;
+    margin: 10px;
+    vertical-align: top;
+    overflow: hidden;*/
+  width: 118px;
+  height: 740.12px;
+  top: 79.94px;
+
+  box-shadow: 0px 0px 250px 0px rgba(255, 208, 41, 0.2);
+}
+
+main {
+  display: flex;
+}
+
+#planets {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+}
+
+#circle1 {
+  width: 14px;
+  height: 14px;
+  background-color: rgba(136, 136, 136, 1);
+  border-radius: 50%;
+  &:hover {
+    transform: scale(4);
+  }
+}
+
+#circle2 {
+  width: 26px;
+  height: 26px;
+  background-color: rgba(231, 205, 205, 1);
+  border-radius: 50%;
+  &:hover {
+    transform: scale(2);
+  }
+}
+#circle3 {
+  width: 28px;
+  height: 28px;
+  background-color: rgba(66, 142, 212, 1);
+  border-radius: 50%;
+  &:hover {
+    transform: scale(2);
+  }
+}
+
+#circle4 {
+  width: 14px;
+  height: 14px;
+  background-color: rgba(239, 95, 95, 1);
+  border-radius: 50%;
+  &:hover {
+    transform: scale(3);
+  }
+}
+
+#circle5 {
+  width: 188px;
+  height: 188px;
+  background-color: rgba(226, 148, 104, 1);
+  border-radius: 50%;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+#saturnus {
+  height: 100%;
+  position: relative;
+  width: 144px; /* Samma bredd som cirkeln */
+  height: 180px;
+}
+
+#saturnus-circle {
+  width: 144px;
+  height: 144px;
+  background-color: rgba(199, 170, 114, 1);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+#saturnus-line {
+  height: 180px; /* Samma höjd som cirkeln */
+  width: 5px; /* Samma bredd som border-left */
+  background-color: rgba(255, 255, 255, 0.4);
+  /* Använd bakgrundsfärg istället för border-left */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  z-index: 1;
+}
+
+#circle7 {
+  width: 66px;
+  height: 66px;
+  background-color: rgba(201, 212, 241, 1);
+  border-radius: 50%;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+#circle8 {
+  width: 66px;
+  height: 66px;
+  background-color: rgba(122, 145, 167, 1);
+  border-radius: 50%;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+footer{
+    background-color: black;
+    color: rgba(255, 255, 255, 1);
+}
