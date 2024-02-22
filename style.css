@@ -6,47 +6,26 @@
 
 body {
   background: linear-gradient(to right, #190b22, #0c164d);
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
   font-style: normal;
+  font-weight: 300;
 }
+
+/* HEADER */
+
 #solaris-header {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  width: 100%;
   justify-content: space-between;
-  font-size: medium;
+  margin-top: 40px;
+  border-bottom: 2px solid rgba(182, 177, 177, 0.2);
 }
 
-#input-header {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-}
-#input-button {
-  height: 3rem;
-  width: 5rem;
-  background-color: rgba(255, 208, 41, 1);
-  border: 1px solid color=rgb(212, 210, 210);
-  border-radius: 4px;
-  font-family: inherit;
-  font-size: larger;
-}
-#search-field {
-  height: 3rem;
-  width: 25rem;
-  margin-left: 150px;
-  border-radius: 4px;
-  border: 1px solid color=rgb(212, 210, 210);
-  font-size: larger;
-  font-family: inherit;
-  padding-left: 1rem;
-}
 #titles-header {
   display: flex;
   flex-direction: column;
-  align-items: end;
-  margin-top: 30px;
   margin-right: 30px;
 }
 
@@ -70,23 +49,27 @@ body {
   text-align: right;
 }
 
-#animation-sun {
-  border-radius: 0 100% 100% 0/0 50% 50% 0;
-  background-color: rgba(255, 208, 41, 1);
-
-  /*display: inline-block;
-    margin: 10px;
-    vertical-align: top;
-    overflow: hidden;*/
-  width: 118px;
-  height: 740.12px;
-  top: 79.94px;
-
-  box-shadow: 0px 0px 250px 0px rgba(255, 208, 41, 0.2);
+#planets-sun {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 40px;
 }
 
-main {
-  display: flex;
+#animation-sun {
+  border-radius: 0 60px 60px 0/0 100px 100px 0;
+  background-image: linear-gradient(
+    to left,
+    #f9e849,
+    #fcc620,
+    #fda100,
+    #fb7a00,
+    #f64b04
+  );
+  width: 59px;
+  height: 250px;
+  box-shadow: 0px 0px 250px 0px rgba(255, 208, 41, 0.2);
 }
 
 #planets {
@@ -96,50 +79,85 @@ main {
   justify-content: space-around;
 }
 
-#circle1 {
-  width: 14px;
-  height: 14px;
-  background-color: rgba(136, 136, 136, 1);
+.planet {
   border-radius: 50%;
+  box-shadow: rgba(246, 245, 244, 0.812) 0px 4px 12px;
+}
+#merkurius {
+  width: 7px;
+  height: 7px;
+  background-image: linear-gradient(
+    to right bottom,
+    #f2e6e9,
+    #c4b2ad,
+    #8e8474,
+    #525a47,
+    #143328
+  );
   &:hover {
     transform: scale(4);
   }
 }
 
-#circle2 {
-  width: 26px;
-  height: 26px;
-  background-color: rgba(231, 205, 205, 1);
-  border-radius: 50%;
-  &:hover {
-    transform: scale(2);
-  }
-}
-#circle3 {
-  width: 28px;
-  height: 28px;
-  background-color: rgba(66, 142, 212, 1);
-  border-radius: 50%;
+#venus {
+  width: 13px;
+  height: 13px;
+  background-image: linear-gradient(
+    to right bottom,
+    #e5e2c5,
+    #d3c1a3,
+    #c19f86,
+    #ae7e6f,
+    #975f5f
+  );
   &:hover {
     transform: scale(2);
   }
 }
 
-#circle4 {
+#jorden {
   width: 14px;
   height: 14px;
-  background-color: rgba(239, 95, 95, 1);
-  border-radius: 50%;
+  background-image: linear-gradient(
+    to right bottom,
+    #7197e6,
+    #5271ab,
+    #364c73,
+    #1e2a3f,
+    #010611
+  );
+  &:hover {
+    transform: scale(2);
+  }
+}
+
+#mars {
+  width: 7px;
+  height: 7px;
+  background-image: linear-gradient(
+    to right bottom,
+    #d09ca8,
+    #d9858e,
+    #dc6e6c,
+    #d85a43,
+    #cb4c0b
+  );
   &:hover {
     transform: scale(3);
   }
 }
 
-#circle5 {
-  width: 188px;
-  height: 188px;
-  background-color: rgba(226, 148, 104, 1);
-  border-radius: 50%;
+#jupiter {
+  width: 99px;
+  height: 99px;
+  background-image: linear-gradient(
+    to left top,
+    #000000,
+    #532623,
+    #975420,
+    #bb9900,
+    #a8eb12
+  );
   &:hover {
     transform: scale(1.2);
   }
@@ -148,15 +166,21 @@ main {
 #saturnus {
   height: 100%;
   position: relative;
-  width: 144px; /* Samma bredd som cirkeln */
-  height: 180px;
+  width: 77px;
+  height: 90px;
 }
 
 #saturnus-circle {
-  width: 144px;
-  height: 144px;
-  background-color: rgba(199, 170, 114, 1);
-  border-radius: 50%;
+  width: 77px;
+  height: 77px;
+  background-image: linear-gradient(
+    to right bottom,
+    #000000,
+    #30191c,
+    #5a2b29,
+    #84422f,
+    #a95e2e
+  );
   position: absolute;
   top: 50%;
   left: 50%;
@@ -165,10 +189,9 @@ main {
 }
 
 #saturnus-line {
-  height: 180px; /* Samma höjd som cirkeln */
-  width: 5px; /* Samma bredd som border-left */
+  height: 90px;
+  width: 3px;
   background-color: rgba(255, 255, 255, 0.4);
-  /* Använd bakgrundsfärg istället för border-left */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -176,27 +199,111 @@ main {
   z-index: 1;
 }
 
-#circle7 {
-  width: 66px;
-  height: 66px;
-  background-color: rgba(201, 212, 241, 1);
-  border-radius: 50%;
+#uranus {
+  width: 33px;
+  height: 33px;
+  background-image: linear-gradient(
+    to left,
+    #0617aa,
+    #0068d0,
+    #009ac1,
+    #6dc3b4,
+    #dae7d8
+  );
   &:hover {
     transform: scale(1.2);
   }
 }
 
-#circle8 {
-  width: 66px;
-  height: 66px;
-  background-color: rgba(122, 145, 167, 1);
-  border-radius: 50%;
+#neptunus {
+  width: 33px;
+  height: 33px;
+  background-image: linear-gradient(
+    to right bottom,
+    #e5e2c5,
+    #b1a592,
+    #7b6d64,
+    #443c3a,
+    #111010
+  );
   &:hover {
     transform: scale(1.2);
   }
 }
 
-footer{
-    background-color: black;
-    color: rgba(255, 255, 255, 1);
+/* MAIN */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
+#search-section {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin-bottom: 50px;
+  position: relative;
+}
+#input-button {
+  height: 3rem;
+  width: 5rem;
+  background-color: rgb(208, 165, 8);
+  border: 1px solid rgb(212, 210, 210);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: larger;
+}
+#search-field {
+  height: 3rem;
+  width: 25rem;
+  border-radius: 4px;
+  border: 1px solid rgb(212, 210, 210);
+  font-size: larger;
+  font-family: inherit;
+  padding-left: 1rem;
+}
+#search-results {
+  display: none;
+
+  position: absolute;
+}
+
+/*KLASSER DOM*/
+
+.overlay {
+  color: #dae7d8;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 30px;
+  width: 50vw;
+  height: 50wh;
+  background-color: rgba(72, 71, 73, 0.264);
+  border: 2px solid rgba(182, 177, 177, 0.2);
+  gap: 20px;
+}
+
+.planetNameClass {
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 3rem;
+  border-bottom: 2px solid rgba(182, 177, 177, 0.2);
+  text-transform: uppercase;
+}
+
+.planetLatinClass {
+  color: rgba(255, 208, 41, 1);
+  font-weight: 300;
+  font-size: 2rem;
+  letter-spacing: 4px;
+  margin-bottom: 1, 5rem;
+  text-transform: uppercase;
+}
+/* FOOTER */
+footer {
+  background-color: black;
+  color: rgba(255, 255, 255, 1);
 }
