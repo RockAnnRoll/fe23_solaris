@@ -12,7 +12,7 @@ body {
   font-weight: 300;
 }
 
-/* HEADER */
+/***************** HEADER ******************/
 
 #solaris-header {
   display: flex;
@@ -22,7 +22,7 @@ body {
   margin-top: 40px;
   border-bottom: 2px solid rgba(182, 177, 177, 0.2);
 }
-
+/***** Titles ******/
 #titles-header {
   display: flex;
   flex-direction: column;
@@ -49,6 +49,8 @@ body {
   text-align: right;
 }
 
+/***** Planets and sun ******/
+
 #planets-sun {
   display: flex;
   flex-direction: row;
@@ -57,19 +59,33 @@ body {
   margin-bottom: 40px;
 }
 
-#animation-sun {
-  border-radius: 0 60px 60px 0/0 100px 100px 0;
+#sun {
+  box-shadow: 0px 0px 250px 0px rgba(255, 208, 41, 0.2);
+  height: 15rem;
+  width: 20rem;
+  border-radius: 50%;
+  margin-left: -15rem;
   background-image: linear-gradient(
-    to left,
+    to right,
     #f9e849,
     #fcc620,
-    #fda100,
-    #fb7a00,
-    #f64b04
+    #e8d379,
+    #eb923f
+   
   );
-  width: 59px;
-  height: 250px;
-  box-shadow: 0px 0px 250px 0px rgba(255, 208, 41, 0.2);
+}
+
+#sun .planet-text {
+  visibility: hidden;
+}
+
+#sun:hover .planet-text {
+  visibility: visible;
+  position:absolute;
+  left:20px;
+  top: 200px;
+
+
 }
 
 #planets {
@@ -82,10 +98,24 @@ body {
 .planet {
   border-radius: 50%;
   box-shadow: rgba(246, 245, 244, 0.812) 0px 4px 12px;
+
 }
+
+.planet-text {
+  color: #c4b2ad;
+  font-size: larger;
+  background-color: rgba(19, 13, 57, 0.706);
+  padding: 10px;
+  width: 100px; 
+  text-align: center;
+  border: 1px solid rgb(212, 210, 210);
+ 
+}
+
+
 #merkurius {
-  width: 7px;
-  height: 7px;
+  width: 5px;
+  height: 5px;
   background-image: linear-gradient(
     to right bottom,
     #f2e6e9,
@@ -94,14 +124,19 @@ body {
     #525a47,
     #143328
   );
-  &:hover {
-    transform: scale(4);
-  }
 }
 
+#merkurius .planet-text {
+  visibility: hidden;
+}
+
+#merkurius:hover .planet-text {
+  visibility: visible;
+  margin-top: 60px;
+}
 #venus {
-  width: 13px;
-  height: 13px;
+  width: 16px;
+  height: 16px;
   background-image: linear-gradient(
     to right bottom,
     #e5e2c5,
@@ -110,14 +145,20 @@ body {
     #ae7e6f,
     #975f5f
   );
-  &:hover {
-    transform: scale(2);
-  }
+}
+
+#venus .planet-text {
+  visibility: hidden;
+}
+
+#venus:hover .planet-text {
+  visibility: visible;
+  margin-top: 60px;
 }
 
 #jorden {
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
   background-image: linear-gradient(
     to right bottom,
     #7197e6,
@@ -126,14 +167,20 @@ body {
     #1e2a3f,
     #010611
   );
-  &:hover {
-    transform: scale(2);
-  }
+}
+
+#jorden .planet-text {
+  visibility: hidden;
+}
+
+#jorden:hover .planet-text {
+  visibility: visible;
+  margin-top: 60px;
 }
 
 #mars {
-  width: 7px;
-  height: 7px;
+  width: 10px;
+  height: 10px;
   background-image: linear-gradient(
     to right bottom,
     #d09ca8,
@@ -142,9 +189,14 @@ body {
     #d85a43,
     #cb4c0b
   );
-  &:hover {
-    transform: scale(3);
-  }
+}
+#mars .planet-text {
+  visibility: hidden;
+}
+
+#mars:hover .planet-text {
+  visibility: visible;
+  margin-top: 60px;
 }
 
 #jupiter {
@@ -158,16 +210,22 @@ body {
     #bb9900,
     #a8eb12
   );
-  &:hover {
-    transform: scale(1.2);
-  }
+}
+
+#jupiter .planet-text {
+  visibility: hidden;
+}
+
+#jupiter:hover .planet-text {
+  visibility: visible;
+  margin-top: 100px;
 }
 
 #saturnus {
   height: 100%;
   position: relative;
   width: 77px;
-  height: 90px;
+  height: 70px;
 }
 
 #saturnus-circle {
@@ -199,6 +257,15 @@ body {
   z-index: 1;
 }
 
+#saturnus-circle .planet-text {
+  visibility: hidden;
+}
+
+#saturnus-circle:hover .planet-text {
+  visibility: visible;
+  margin-top: 90px;
+}
+
 #uranus {
   width: 33px;
   height: 33px;
@@ -210,9 +277,15 @@ body {
     #6dc3b4,
     #dae7d8
   );
-  &:hover {
-    transform: scale(1.2);
-  }
+}
+
+#uranus .planet-text {
+  visibility: hidden;
+}
+
+#uranus:hover .planet-text {
+  visibility: visible;
+  margin-top: 60px;
 }
 
 #neptunus {
@@ -226,12 +299,18 @@ body {
     #443c3a,
     #111010
   );
-  &:hover {
-    transform: scale(1.2);
-  }
 }
 
-/* MAIN */
+#neptunus .planet-text {
+  visibility: hidden;
+}
+
+#neptunus:hover .planet-text {
+  visibility: visible;
+  margin-top: 60px;
+}
+
+/*********************** MAIN ************************/
 
 main {
   display: flex;
@@ -240,12 +319,13 @@ main {
   margin-top: 60px;
 }
 
+/***** Search section *****/
+
 #search-section {
   display: flex;
   flex-direction: row;
   gap: 5px;
   margin-bottom: 50px;
-  position: relative;
 }
 #input-button {
   height: 3rem;
@@ -265,18 +345,15 @@ main {
   font-family: inherit;
   padding-left: 1rem;
 }
-#search-results {
-  display: none;
 
-  position: absolute;
-}
-
-/*KLASSER DOM*/
+/***** Overlay & DOM ******/
 
 .overlay {
   color: #dae7d8;
   font-size: large;
   display: flex;
+  flex-wrap: wrap;
+  font-weight: 300;
   flex-direction: column;
   padding: 30px 30px;
   width: 50vw;
@@ -302,8 +379,36 @@ main {
   margin-bottom: 1, 5rem;
   text-transform: uppercase;
 }
-/* FOOTER */
+
+.planet-titles {
+  color: rgba(255, 208, 41, 1);
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.infoDivClass {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  border-bottom: 2px solid rgba(182, 177, 177, 0.2);
+}
+
+.infoDivClass > * {
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+/********************** FOOTER *************************/
 footer {
-  background-color: black;
+  border-top: 2px solid rgba(182, 177, 177, 0.2);
   color: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  text-align: right;
+  justify-content: center;
+  gap: 1rem;
+  height: 9rem;
+  margin-top: 40px;
+  padding-right: 20px;
 }
