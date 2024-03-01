@@ -19,22 +19,22 @@ body {
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
-  margin-top: 40px;
+  margin-top: 1.5rem;
   border-bottom: 2px solid rgba(182, 177, 177, 0.2);
 }
 /***** Titles ******/
+
 #titles-header {
   display: flex;
   flex-direction: column;
-  margin-right: 30px;
+  margin-right: 2rem;
 }
 
 #head-title {
   color: rgba(255, 255, 255, 1);
   font-family: "Secular One", sans-serif;
-  font-size: 60px;
+  font-size: 3rem;
   font-weight: 400;
-  line-height: 60px;
   letter-spacing: 0.09em;
   text-align: right;
 }
@@ -42,26 +42,27 @@ body {
 #sub-title {
   color: rgba(255, 208, 41, 1);
   font-family: Lora;
-  font-size: 24px;
+  font-size: 2rem;
   font-weight: 400;
-  line-height: 24px;
   letter-spacing: 0.6em;
   text-align: right;
 }
 
 /***** Planets and sun ******/
 
-#planets-sun {
+#planetsAndSun {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 1rem;
 }
+
+/* Solen */
 
 #sun {
   box-shadow: 0px 0px 250px 0px rgba(255, 208, 41, 0.2);
-  height: 15rem;
+  height: 18rem;
   width: 20rem;
   border-radius: 50%;
   margin-left: -15rem;
@@ -88,6 +89,8 @@ body {
 
 }
 
+/* Planet-klasser */
+
 #planets {
   display: flex;
   align-items: center;
@@ -105,13 +108,15 @@ body {
   color: #c4b2ad;
   font-size: larger;
   background-color: rgba(19, 13, 57, 0.706);
-  padding: 10px;
-  width: 100px; 
+  padding: 1rem;
+  width: 7rem; 
   text-align: center;
   border: 1px solid rgb(212, 210, 210);
  
 }
 
+
+/* Merkurius */
 
 #merkurius {
   width: 5px;
@@ -134,6 +139,10 @@ body {
   visibility: visible;
   margin-top: 60px;
 }
+
+
+/* Venus */
+
 #venus {
   width: 16px;
   height: 16px;
@@ -155,6 +164,9 @@ body {
   visibility: visible;
   margin-top: 60px;
 }
+
+
+/* Jorden */
 
 #jorden {
   width: 18px;
@@ -178,6 +190,9 @@ body {
   margin-top: 60px;
 }
 
+
+/* Mars */
+
 #mars {
   width: 10px;
   height: 10px;
@@ -198,6 +213,9 @@ body {
   visibility: visible;
   margin-top: 60px;
 }
+
+
+/* Jupiter */
 
 #jupiter {
   width: 99px;
@@ -220,6 +238,9 @@ body {
   visibility: visible;
   margin-top: 100px;
 }
+
+
+/* Saturnus */
 
 #saturnus {
   height: 100%;
@@ -266,6 +287,9 @@ body {
   margin-top: 90px;
 }
 
+
+/* Uranus */
+
 #uranus {
   width: 33px;
   height: 33px;
@@ -287,6 +311,9 @@ body {
   visibility: visible;
   margin-top: 60px;
 }
+
+
+/* Neptunus */
 
 #neptunus {
   width: 33px;
@@ -399,6 +426,7 @@ main {
 }
 
 /********************** FOOTER *************************/
+
 footer {
   border-top: 2px solid rgba(182, 177, 177, 0.2);
   color: rgba(255, 255, 255, 1);
@@ -409,6 +437,6 @@ footer {
   justify-content: center;
   gap: 1rem;
   height: 9rem;
-  margin-top: 40px;
-  padding-right: 20px;
+  margin-top: 1rem;
+  padding-right: 3rem;
 }

@@ -1,4 +1,5 @@
 
+//-----------MAIN JS-FIL---------------
 
 //-----------HÄMTA API-NYCKEL OCH INFO OM PLANETER------------------
 
@@ -19,7 +20,7 @@ fetchApiKey()
     //Infon loggas till konsolen.
 });   
 
-//---------------HÄMTA SÖKRESULTAT-----------------------------
+//---------------HÄNDELSELYSSNAREN FÖR KNAPP OCH SÖKFÄLT -----------------------------
 
 const searchField=document.getElementById("search-field");
 const submitBtn=document.getElementById("input-button");
@@ -33,13 +34,15 @@ submitBtn.addEventListener('click', function() {
     //Funktionen searchPlanets körs och sparas i variabeln matchingPlanets
     updateDOM(matchingPlanets); 
 });
+
+//För att kunna trycka på enter istället för sök.
 searchField.addEventListener('keydown', function(event) { 
-    if (event.keyCode === 13) { 
-        event.preventDefault(); // Förhindra standard "Enter" beteendet
-        submitBtn.click(); // Utlöser klickhändelsen på submitBtn
+    if (event.key === 'Enter') { 
+        event.preventDefault(); // Förhindra det vanliga "Enter" beteendet
+        submitBtn.click(); // Om enter - klickfunktionen körs igång
     } 
 });
-//För att kunna trycka på enter istället för sök.
+
 
 
 

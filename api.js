@@ -1,4 +1,10 @@
+
+//Funktionerna för att hämta api-nyckel o data om planeter
+
+
 const baseUrl = "https://n5n3eiyjb0.execute-api.eu-north-1.amazonaws.com"; //Bas URL
+
+//Hämta Api-nyckel
 
 export function fetchApiKey() {
     return fetch('https://n5n3eiyjb0.execute-api.eu-north-1.amazonaws.com/keys', {
@@ -11,7 +17,7 @@ export function fetchApiKey() {
     });
 }
 
-//Hämta Api-nyckel
+//Hämta data om planeter
 
 export function fetchPlanetData(apiKey) {
     return fetch('https://n5n3eiyjb0.execute-api.eu-north-1.amazonaws.com/bodies', {
@@ -25,4 +31,3 @@ export function fetchPlanetData(apiKey) {
     });
 }
 
-//Hämta data om planeter
